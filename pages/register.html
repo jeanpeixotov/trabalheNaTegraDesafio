@@ -1,0 +1,11 @@
+<section class="section-register">
+	  <form ng-submit="submit()">
+		  <button type="submit">Register</button>
+		  <label>Name:</label>
+		  <input class="form-control" type=text ng-model="developer.nameDev" required>
+		  <label>Experience:</label>
+		  <select ng-model="developer.experience" ng-options="exp for exp in experiences" required>
+			  <option></option>
+		  </select>
+	 </form>
+</section>
