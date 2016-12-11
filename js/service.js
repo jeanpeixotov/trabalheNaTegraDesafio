@@ -41,5 +41,32 @@ angular.module('tegrapair').service('service', function(){
         lastPair.nav    = nav;
         return false;
     }
-    
+    function verifyQtyDevs(developers) {
+        var resultado = 0;
+        for (var i in developers) {
+            if (developers.hasOwnProperty(i)) {
+                category  = developers[i];
+                resultado += category.length;
+            }
+         }
+        return resultado;
+    };
+    function onlyTrainee(developers,qtyDevs) {
+        if (developers.trainee.length === qtyDevs) {
+            return true;
+        }else {
+            return false;
+        }
+    };
+    function myRand(limit) {
+        return Math.floor((Math.random() * limit));
+    };
+    function isEqual(nav,driver) {
+        if(nav === driver){
+            return undefined;
+        }else {
+            return nav;
+        }
+    };
+
 });
