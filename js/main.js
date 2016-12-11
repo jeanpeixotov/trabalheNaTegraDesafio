@@ -34,3 +34,27 @@ tegrapair.config(function($routeProvider) {
         })
         .otherwise({redirectTo: '/'});
 });
+
+tegrapair.controller('RegisterPair', function($scope) {
+    $scope.developer = {};
+    $scope.experiences = categoryExp;
+    $scope.submit = submit;
+
+    function submit() {
+        switch ($scope.developer.experience) {
+            case categoryExp[0]:
+                developers.trainee.push($scope.developer);
+                break;
+            case categoryExp[1]:
+                developers.junior.push($scope.developer);
+                break;
+            case categoryExp[2]:
+                developers.full.push($scope.developer);
+                break;
+            case categoryExp[3]:
+                developers.senior.push($scope.developer);
+                break;
+        }
+        $scope.developer = {};
+    };
+});
