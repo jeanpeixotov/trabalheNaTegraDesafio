@@ -58,3 +58,34 @@ tegrapair.controller('RegisterPair', function($scope) {
         $scope.developer = {};
     };
 });
+
+tegrapair.controller('GeneratePair',['$scope','service', function($scope,service) {
+
+    $scope.GeneratePair = function() {
+
+        if(!service.MinRequirements(developers)){
+            $scope.err = 'No Available pair programming...';
+        }else{
+            var driver = service.Generator('driver',probability[4],developers);
+
+            for (var i = 0; i < probability.length-1; i++) {
+                if (driver.experience === categoryExp[i]) {
+                    var nav = service.Generator(driver,probability[i],developers);
+                }
+            }
+            var lastPair = service.lastPairEquals(driver,nav)
+            if(lastPair){
+                $scope.driver = [];
+                $scope.nav    = [] ;
+                $scope.err = 'Sorry, this pair was drawn in the last round, try to raffle again....';
+                $scope.lastPair = lastPair;
+            }else {
+                $scope.driver = driver;
+                $scope.nav    = nav;
+                $scope.err    = ' - ';
+                $scope.lastPair = [];
+
+            }
+        }
+    };
+}]);
