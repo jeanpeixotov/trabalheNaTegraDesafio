@@ -1,0 +1,15 @@
+footer {
+        background-color: $cinnabar;
+        padding-top: 15px;
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        min-height: 10vh;
+
+    a {
+        color: $white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+}
