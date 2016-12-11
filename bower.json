@@ -1,0 +1,21 @@
+{
+  "name": "trabalheNaTegraDesafio",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Jean"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/jeanvitor06/trabalheNaTegraDesafio",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+  "normalize-css": "normalize.css#^4.2.0"
+  }
+}
