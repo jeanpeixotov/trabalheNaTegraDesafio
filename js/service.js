@@ -33,6 +33,13 @@ angular.module('tegrapair').service('service', function(){
         }
         return dev;
     };
+    this.lastPairEquals = function (driver,nav) {
+        if(lastPair.driver === driver && lastPair.nav === nav){
+            return (lastPair);
+        }
+        lastPair.driver = driver;
+        lastPair.nav    = nav;
+        return false;
+    }
     
-
 });
