@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="tegrapair">
+    <head>
+      <title>Tegra Pair</title>
+      <link rel = "shortcut icon" type = "image/x-icon" href = "favicon.ico"/>
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+      <script src="js/main.js"></script>
+      <script src="js/service.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="https://github.com/tegraoss/trabalheNaTegra/tree/master/testes/tegra-pair" target="_blank">  <h1>TEGRA PAIR</h1>  </a>
+        </header>
+        <nav>
+            <ul class="tab-list">
+                <li> <a href="/#/register">Register</a> </li>
+                <li> <a href="/#/generate">Generate</a></li>
+
+            </ul>
+        <nav>
+
+        <div ng-view>
+        </div>
+    </body>
+    <footer>
+    	 <p class="item-footer">
+             <a href="https://github.com/jeanvitor06" target="_blank">
+                 Code by: Jean Vitor Peixoto.
+            </a>
+    	 </p>
+    </footer>
+</html>
